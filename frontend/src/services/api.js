@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Update this URL to match your backend
-// NOTE: for physical devices, use your computer's IP address, NOT localhost
-const API_BASE_URL = 'http://192.168.1.12:5001';
+// API URL is loaded from environment variable
+// Set EXPO_PUBLIC_API_BASE_URL in .env file
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || 'http://localhost:5001';
 console.log('API URL:', API_BASE_URL);
 
 const api = axios.create({
